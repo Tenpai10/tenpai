@@ -39,40 +39,48 @@ function Technologies() {
         <div className="space-y-2">
           <h6 className="text-sm text-justify">Programming Language</h6>
           <div className="flex gap-2">
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
+            <ImageLoader img="/assets/js-logo.png" />
+            <ImageLoader img="/assets/ts-logo.png" />
+            <ImageLoader img="/assets/python-logo.png" />
+            <ImageLoader img="/assets/C-logo.png" />
+            <ImageLoader img="/assets/C2-logo.png" />
           </div>
         </div>
         <div className="space-y-2">
           <h6 className="text-sm text-justify">Development Stack</h6>
           <div className="flex gap-2">
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-          </div>
-          <div className="flex gap-2">
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
+            <ImageLoader img="/assets/react-logo.png" />
+            <ImageLoader img="/assets/next-logo.jpeg" />
+            <ImageLoader img="/assets/vue-logo.png" />
+            <ImageLoader img="/assets/prisma-logo.png" />
+            <ImageLoader img="/assets/mysql-logo.png" />
+            <ImageLoader img="/assets/mongodb-logo.png" />
+            <ImageLoader img="/assets/tailwind-logo.png" />
           </div>
         </div>
         <div className="space-y-2">
           <h6 className="text-sm text-justify">Arts and Design</h6>
           <div className="flex gap-2">
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
-            <div className="w-9 h-9 rounded-md bg-gray-300" />
+            <ImageLoader img="/assets/figma-logo.png" />
+            <ImageLoader img="/assets/photoshop-logo.png" />
+            <ImageLoader img="/assets/illustrator-logo.png" />
           </div>
         </div>
       </div>
     </section>
+  )
+}
+const ImageLoader = ({ img }: { img: string }) => {
+  return (
+    <div className="relative w-9 h-9 rounded-md bg-transparent shadow-md">
+      <Image
+        src={img}
+        alt="no image"
+        objectFit="cover"
+        layout="fill"
+        className="rounded-md"
+      />
+    </div>
   )
 }
 
@@ -113,15 +121,22 @@ function Contactme() {
         <div className="flex-1 h-1 bg-black" />
       </div>
       <div className="m-2 space-y-2">
-        <p>Care for a collab?</p>
+        <p className="">Care for a collab?</p>
         <form className="space-y-2">
-          <TextInput placeholder="Your name" />
-          <TextInput placeholder="Your email" />
+          <TextInput
+            placeholder="Your name"
+            classNames={{ input: "border focus:outline-none" }}
+          />
+          <TextInput
+            placeholder="Your email"
+            classNames={{ input: "border focus:outline-none" }}
+          />
           <Textarea
             placeholder="Tell me about it"
             autosize
             minRows={2}
             maxRows={4}
+            classNames={{ input: "border focus:outline-none" }}
           />
           <button className="w-full h-10 rounded-md bg-gray-200 flex justify-center items-center">
             Submit
