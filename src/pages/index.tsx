@@ -44,7 +44,7 @@ const Home: NextPage = () => {
         </div>
         <About />
         <Technologies />
-        <Projects />
+        {/* <Projects /> */}
         <Contactme />
       </main>
       <footer className="bg-[#27272A] text-neutral-300 font-sourceSans h-36 flex justify-center items-center p-6">
