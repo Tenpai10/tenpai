@@ -21,9 +21,9 @@ function Rating({ star }: { star: number }) {
 
 function Technology({ img, star }: { img: string; star: number }) {
   return (
-    <div className="flex items-center gap-2 w-full">
+    <div className="relative">
+      {/* <i className="fa-solid fa-star text-xs text-yellow-400 absolute z-10 right-0" /> */}
       <ImageLoader img={img} />
-      <Rating star={star} />
     </div>
   )
 }
@@ -37,34 +37,36 @@ export function Technologies() {
         </div>
         <div className="flex-1 h-1 bg-black" />
       </div>
-      <div className="m-2 grid grid-cols-3 gap-2 md:gap-6">
-        <div className="space-y-2">
-          <h6 className="text-sm md:text-xl">Programming</h6>
-          <div className="flex flex-col gap-2 justify-center items-center">
-            <Technology img="/assets/js-logo.png" star={5} />
-            <Technology img="/assets/ts-logo.png" star={4} />
-            <Technology img="/assets/python-logo.png" star={4} />
-            <Technology img="/assets/C2-logo.png" star={4} />
-            <Technology img="/assets/C-logo.png" star={3} />
+      <div className="m-2 grid grid-cols-2 gap-4 md:gap-6 font-sourceSans">
+        <div className="rounded-md col-span-2 shadow-xl p-2 flex gap-4">
+          <div className="space-y-2">
+            <h6 className="text-sm md:text-xl">Programming</h6>
+            <div className="grid grid-cols-3 gap-4">
+              <Technology img="/assets/js-logo.png" star={5} />
+              <Technology img="/assets/ts-logo.png" star={4} />
+              <Technology img="/assets/python-logo.png" star={4} />
+              <Technology img="/assets/C2-logo.png" star={4} />
+              <Technology img="/assets/C-logo.png" star={3} />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <h6 className="text-sm md:text-xl">Development</h6>
+            <div className="grid grid-cols-3 gap-4">
+              <Technology img="/assets/react-logo.png" star={5} />
+              <Technology img="/assets/next-logo.jpeg" star={5} />
+              <Technology star={5} img="/assets/tailwind-logo.png" />
+              <Technology img="/assets/svelte-logo.png" star={2} />
+              <Technology img="/assets/vue-logo.png" star={2} />
+              <Technology img="/assets/prisma-logo.png" star={3} />
+              <Technology star={3} img="/assets/mysql-logo.png" />
+              <Technology star={2} img="/assets/mongodb-logo.png" />
+            </div>
           </div>
         </div>
-        <div className="space-y-2">
-          <h6 className="text-sm md:text-xl">Development</h6>
-          <div className="flex flex-col gap-2 justify-center items-center">
-            <Technology img="/assets/react-logo.png" star={5} />
-            <Technology img="/assets/next-logo.jpeg" star={5} />
-            <Technology star={5} img="/assets/tailwind-logo.png" />
-            <Technology img="/assets/svelte-logo.png" star={2} />
-            <Technology img="/assets/vue-logo.png" star={2} />
-            <Technology img="/assets/prisma-logo.png" star={3} />
-            <Technology star={3} img="/assets/mysql-logo.png" />
-            <Technology star={2} img="/assets/mongodb-logo.png" />
-          </div>
-        </div>
-        <div className="space-y-2">
+        <div className="rounded-md shadow-xl col-span-2 flex gap-4 p-2">
           <div className="space-y-2">
             <h6 className="text-sm md:text-xl">Designing</h6>
-            <div className="flex flex-col gap-2 justify-center items-center">
+            <div className="grid grid-cols-3 gap-2">
               <Technology star={5} img="/assets/figma-logo.png" />
               <Technology star={5} img="/assets/photoshop-logo.png" />
               <Technology star={3} img="/assets/illustrator-logo.png" />
@@ -72,7 +74,7 @@ export function Technologies() {
           </div>
           <div className="space-y-2">
             <h6 className="text-sm md:text-xl">Management</h6>
-            <div className="flex flex-col gap-2 justify-center items-center">
+            <div className="grid grid-cols-3 gap-2">
               <Technology star={5} img="/assets/github-logo.png" />
               <Technology star={5} img="/assets/trello-logo.png" />
             </div>
