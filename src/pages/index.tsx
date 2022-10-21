@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <nav className="h-8 md:h-12"></nav>
       <main className="flex flex-col gap-3 md:gap-4 m-6 items-center min-h-screen font-playfair">
         <div className="flex items-end gap-4 w-full h-44">
-          <div className="relative w-40 h-44 md:w-4 md:h-52 rounded-md border">
+          <div className="relative w-40 h-44 md:w-40 md:h-52 rounded-md border">
             <Image
               className="rounded-md"
               src={"/arvae.JPG"}
